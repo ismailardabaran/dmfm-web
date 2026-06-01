@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-ember-orange: #f53900;
+  --color-pale-peach: #ffe0d6;
+  --color-midnight-charcoal: #040101;
+  --color-canvas-white: #fffafa;
+  --color-border-fog: #e5e5e5;
+  --color-muted-ash: #827e7e;
+  --color-divider-gray: #c0bcbc;
+
+  /* Typography */
+  --font-geist: 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-caption: 12px;
+  --leading-caption: 1.4;
+  --text-body: 14px;
+  --leading-body: 1.4;
+  --text-body-lg: 16px;
+  --leading-body-lg: 1.4;
+  --text-subheading: 20px;
+  --leading-subheading: 1.25;
+  --text-heading-sm: 24px;
+  --leading-heading-sm: 1.25;
+  --text-heading: 32px;
+  --leading-heading: 1.11;
+  --text-heading-lg: 40px;
+  --leading-heading-lg: 1.11;
+  --text-display: 48px;
+  --leading-display: 1.11;
+  --text-display-lg: 64px;
+  --leading-display-lg: 1;
+  --text-display-xl: 80px;
+  --leading-display-xl: 1;
+
+  /* Spacing */
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-112: 112px;
+  --spacing-128: 128px;
+  --spacing-240: 240px;
+
+  /* Border Radius */
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+:root {
+  --background: #fffafa;
+  --foreground: #040101;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist);
+  margin: 0;
+  padding: 0;
+}
+
+/* Premium Header Glassmorphism */
+.premium-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.8);
+  background-color: rgba(255, 250, 250, 0.9); /* Solid translucent Canvas White */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom premium design classes & animation effects */
+.hover-scale {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(245, 57, 0, 0.15) 0px 8px 24px;
+}
+
+/* Sound wave animations */
+@keyframes bounce-slow {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.soundwave-bar {
+  display: inline-block;
+  width: 4px;
+  background-color: var(--color-ember-orange);
+  border-radius: 9999px;
+  transform-origin: bottom;
+  animation: bounce-slow 1.2s ease-in-out infinite;
+}
+
+.soundwave-bar:nth-child(2) {
+  animation-delay: 0.15s;
+  height: 24px;
+}
+.soundwave-bar:nth-child(3) {
+  animation-delay: 0.3s;
+  height: 36px;
+}
+.soundwave-bar:nth-child(4) {
+  animation-delay: 0.45s;
+  height: 16px;
+}
+.soundwave-bar:nth-child(5) {
+  animation-delay: 0.6s;
+  height: 28px;
+}
+
+/* Premium smooth fade-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
