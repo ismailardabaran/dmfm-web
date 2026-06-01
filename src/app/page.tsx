@@ -443,20 +443,13 @@ export default function Home() {
 
             {/* Card 3: Primary Target Group */}
             <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded bg-ember-orange text-canvas-white shadow-subtle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path d="M4.5 6.375a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM7.875 6.375a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM11.25 6.375a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM4.5 9.75a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM7.875 9.75a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM11.25 9.75a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM4.5 13.125a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM7.875 13.125a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM11.25 13.125a.9.9 0 0 1 .9-.9h.75a.9.9 0 0 1 .9.9v.75a.9.9 0 0 1-.9.9h-.75a.9.9 0 0 1-.9-.9v-.75ZM15 4.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v14.25c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375V4.875ZM18.75 4.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v14.25c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375V4.875ZM22.5 4.875a.375.375 0 0 0-.375-.375h-1.5a.375.375 0 0 0-.375.375v14.25c0 .207.168.375.375.375h1.5a.375.375 0 0 0 .375-.375V4.875ZM2.25 18.75a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-geist text-subheading font-bold text-midnight-charcoal">
-                    {t.targetGroups.primaryTitle}
-                  </h4>
-                  <p className="text-xs text-muted-ash font-medium font-geist mt-0.5">
-                    {t.targetGroups.primaryDesc}
-                  </p>
-                </div>
+              <div className="flex flex-col mb-6">
+                <h4 className="font-geist text-subheading font-bold text-midnight-charcoal">
+                  {t.targetGroups.primaryTitle}
+                </h4>
+                <p className="text-xs text-muted-ash font-medium font-geist mt-1">
+                  {t.targetGroups.primaryDesc}
+                </p>
               </div>
 
               <div className="flex-1 flex flex-col gap-4 border-t border-border-fog pt-6">
@@ -475,20 +468,13 @@ export default function Home() {
 
             {/* Card 4: Secondary Target Group */}
             <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex h-12 w-12 items-center justify-center rounded bg-midnight-charcoal text-canvas-white shadow-subtle">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path d="M18 1.5a2.25 2.25 0 0 1 2.25 2.25v16.5A2.25 2.25 0 0 1 18 22.5H6a2.25 2.25 0 0 1-2.25-2.25V3.75A2.25 2.25 0 0 1 6 1.5h12Zm-3 18.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM9 19.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="font-geist text-subheading font-bold text-midnight-charcoal">
-                    {t.targetGroups.secondaryTitle}
-                  </h4>
-                  <p className="text-xs text-muted-ash font-medium font-geist mt-0.5">
-                    {t.targetGroups.secondaryDesc}
-                  </p>
-                </div>
+              <div className="flex flex-col mb-6">
+                <h4 className="font-geist text-subheading font-bold text-midnight-charcoal">
+                  {t.targetGroups.secondaryTitle}
+                </h4>
+                <p className="text-xs text-muted-ash font-medium font-geist mt-1">
+                  {t.targetGroups.secondaryDesc}
+                </p>
               </div>
 
               <div className="flex-1 flex flex-col gap-4 border-t border-border-fog pt-6">
