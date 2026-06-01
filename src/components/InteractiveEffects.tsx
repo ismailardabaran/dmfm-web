@@ -246,6 +246,64 @@ export const InteractiveEffects: React.FC = () => {
     };
   }, [language]);
 
+  // Premium, soft Scroll Reveal intersection observer with staggered entry delay
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const observerOptions = {
+      threshold: 0.02,
+      // Trigger when the element is 50px above the bottom viewport edge for a more noticeable, soft entrance
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      // Find all entries intersecting now and not already revealed
+      const intersecting = entries.filter((entry) => entry.isIntersecting);
+
+      intersecting.forEach((entry, index) => {
+        const target = entry.target as HTMLElement;
+        
+        // Dynamic staggered delay (80ms gap) only between elements entering simultaneously
+        const staggerDelay = index * 80;
+        
+        setTimeout(() => {
+          target.classList.add('revealed');
+        }, staggerDelay);
+        
+        // Stop observing once the fade-in animation triggers
+        observer.unobserve(target);
+      });
+    }, observerOptions);
+
+    // Collect and observe all elements carrying the scroll-reveal signature class
+    const observeElements = () => {
+      const elements = document.querySelectorAll('.scroll-reveal');
+      elements.forEach((el) => {
+        if (!el.classList.contains('revealed')) {
+          observer.observe(el);
+        }
+      });
+    };
+
+    // Initial setup
+    observeElements();
+
+    // MutationObserver monitors for dynamically injected or filtered markup
+    const mutationObserver = new MutationObserver(() => {
+      observeElements();
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, [language]);
+
   return (
     <>
       <canvas

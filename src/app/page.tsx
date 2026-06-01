@@ -320,7 +320,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-5 flex justify-center items-center">
-              <div className="relative w-full max-w-[420px] aspect-square rounded-2xl border border-border-fog bg-canvas-white p-8 shadow-subtle flex flex-col justify-between overflow-hidden group hover:border-ember-orange/30 transition-all duration-300">
+              <div className="relative w-full max-w-[420px] aspect-square rounded-2xl border border-border-fog bg-canvas-white p-8 shadow-subtle flex flex-col justify-between overflow-hidden group hover:border-ember-orange/30 hover-scale scroll-reveal">
                 <div className="flex items-center gap-1.5">
                   <span className="w-3 h-3 rounded-full bg-red-400"></span>
                   <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
@@ -363,7 +363,7 @@ export default function Home() {
       <section id="about" className="py-28 border-b border-border-fog bg-transparent scroll-mt-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-8">
           {/* Main Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-20 animate-fadeIn">
+          <div className="text-center max-w-3xl mx-auto mb-20 scroll-reveal">
             <span className="text-xs font-bold text-ember-orange uppercase tracking-wider mb-2 block font-geist">
               {language === 'tr' ? 'Projeye Genel Bakış' : 'Project Overview'}
             </span>
@@ -380,7 +380,7 @@ export default function Home() {
           {/* Unified 2x2 Grid of Cards under "Proje Hakkında" */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Card 1: Objectives & Stats */}
-            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale">
+            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
               <span className="text-xs font-bold text-ember-orange uppercase tracking-wider mb-2 font-geist">
                 {language === 'tr' ? 'Detaylı Anlatım' : 'In-depth Overview'}
               </span>
@@ -422,7 +422,7 @@ export default function Home() {
             </div>
 
             {/* Card 2: Expected Results */}
-            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale">
+            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
               <h3 className="font-geist text-heading font-bold text-midnight-charcoal mb-6">
                 {t.project.resultsTitle}
               </h3>
@@ -442,7 +442,7 @@ export default function Home() {
             </div>
 
             {/* Card 3: Primary Target Group */}
-            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale">
+            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded bg-ember-orange text-canvas-white shadow-subtle">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -474,7 +474,7 @@ export default function Home() {
             </div>
 
             {/* Card 4: Secondary Target Group */}
-            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale">
+            <div className="flex flex-col rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-8 md:p-10 shadow-subtle hover-scale scroll-reveal">
               <div className="flex items-center gap-4 mb-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded bg-midnight-charcoal text-canvas-white shadow-subtle">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
@@ -511,7 +511,7 @@ export default function Home() {
       {/* 4. PARTNERS SECTION */}
       <section id="partners" className="py-28 border-b border-border-fog bg-transparent">
         <div className="mx-auto max-w-[1500px] px-6 sm:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
             <span className="text-xs font-bold text-ember-orange uppercase tracking-wider mb-2 block font-geist">
               {language === 'tr' ? 'Katılımcı Kurumlar' : 'Partner Network'}
             </span>
@@ -531,7 +531,7 @@ export default function Home() {
               return (
                 <div
                   key={partner.id}
-                  className="flex flex-col h-full rounded-lg border border-border-fog bg-canvas-white p-6 shadow-subtle hover-scale"
+                  className="flex flex-col h-full rounded-lg border border-border-fog bg-canvas-white p-6 shadow-subtle hover-scale scroll-reveal"
                 >
                   <div className="flex flex-col gap-3 mb-6">
                     <div className="flex items-center justify-between w-full">
@@ -593,7 +593,7 @@ export default function Home() {
       {/* 5. ACTIVITIES & TIMELINE SECTION */}
       <section id="activities" className="py-28 border-b border-border-fog bg-transparent">
         <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
             <span className="text-xs font-bold text-ember-orange uppercase tracking-wider mb-2 block font-geist">
               {language === 'tr' ? 'Hareketlilik Takvimi' : 'Mobility & Training Log'}
             </span>
@@ -619,7 +619,7 @@ export default function Home() {
                       <span className="h-1.5 w-1.5 rounded-full bg-ember-orange"></span>
                     </span>
 
-                    <div className="rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-6 md:p-8 shadow-subtle hover:border-ember-orange/20 transition-all">
+                    <div className="rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-6 md:p-8 shadow-subtle hover:border-ember-orange/20 hover-scale scroll-reveal">
                       <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                         <span className="text-xs font-bold font-geist text-ember-orange uppercase tracking-wider bg-pale-peach px-2.5 py-1 rounded-full">
                           {act.location}
@@ -667,7 +667,7 @@ export default function Home() {
                 </h3>
 
                 {localActivity && (
-                  <div className="rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-6 md:p-8 shadow-subtle">
+                  <div className="rounded-lg border border-border-fog bg-canvas-white p-5 sm:p-6 md:p-8 shadow-subtle hover-scale scroll-reveal">
                     <span className="text-xs font-bold font-geist text-muted-ash uppercase tracking-wider mb-2 block">
                       {localActivity.location}
                     </span>
@@ -701,7 +701,7 @@ export default function Home() {
       {/* 6. PHOTO GALLERY SECTION */}
       <section id="gallery" className="py-28 bg-transparent">
         <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16 scroll-reveal">
             <span className="text-xs font-bold text-ember-orange uppercase tracking-wider mb-2 block font-geist">
               {language === 'tr' ? 'Görsel Galeri' : 'Photo Records'}
             </span>
@@ -713,7 +713,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 mb-12 justify-center">
+          <div className="flex flex-wrap gap-2 mb-12 justify-center scroll-reveal">
             {Object.entries({
               all: t.gallerySection.categories.all,
               poland: t.gallerySection.categories.poland,
@@ -734,7 +734,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="relative group/slider px-4">
+          <div className="relative group/slider px-4 scroll-reveal">
             {/* Left navigation arrow */}
             <button
               onClick={handlePrev}
